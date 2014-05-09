@@ -15,17 +15,10 @@ before_script:
 - bundle exec rake db:migrate RAILS_ENV=test
 script:
 - RAILS_ENV=test bundle exec rake
-addons:
-  code_climate:
-    repo_token:
-      secure: "K9bHHh7Ib/TSXVPRYuAdL8yukkfshSK12bDE0M9LGpfy337fSjyoLMmX7kJh7F3vZCXCDwu94z9K40uSMFlmRr7FYZlgt0N7vTb7Zt5AjtJXoZKyflX1Yr+vP2Poql4JAJRgl+FDkBz0RlEWPtZFhZWkYQSWy23CBWItzKbGLvs="
-notifications:
-  flowdock:
-    secure: VxM2wEGKNn53R28HSUM1ZTc39XUTOfe203kNf9C8Upv+B0ValbeYOTPeqelgK6+qMwDIlSZu6on0zHINVhzHsQDH+3EY6micZP8OCAgHFGGPe0/GPujZA+lY1by3OBlUVg7GJgGBu0qAg62UNFZwbDWMTb7EPMCnN4KCcLn2hkc=
 deploy:
   provider: heroku
   api_key:
-    secure: qYpTvnEaacSYXMTmP7UvjnbUe369Z9C5GlB7aqmFwXHpeeR06447t5o1VtBDxKMlu9eu9e2FFL6UrCXkcGXLwx94O3/F/oC2wwLqyxmo6buNtgkp/2zPGceS5hX/dmWMKl0yXwT74hwUpzXKO143R4IVPmak+W9JeJ+nUDDDJ+Q=
+    secure: "YdSzaHpoAjgZ5uql38lg0m0Svw2soepIBWH7vQzbvl/VXc8DVHPdaOcQIbSPJU6Oyo/56Bpp0BLbxPo6X3tVnJS2e06OHZxC9nEqOUT4tsR6S3wSeN8bFbPTnSH9r+Ay7iU0Q+4niedRNat1WY+U98aRo5KincTwQrlJ/ut6R1c="
   app:
     master: creatr-api-staging
     production: creatr-api
@@ -35,3 +28,10 @@ deploy:
     - "rake cleanup"
   on:
     repo: slnz/creatr_api
+addons:
+  code_climate:
+    repo_token:
+      secure: "K9bHHh7Ib/TSXVPRYuAdL8yukkfshSK12bDE0M9LGpfy337fSjyoLMmX7kJh7F3vZCXCDwu94z9K40uSMFlmRr7FYZlgt0N7vTb7Zt5AjtJXoZKyflX1Yr+vP2Poql4JAJRgl+FDkBz0RlEWPtZFhZWkYQSWy23CBWItzKbGLvs="
+notifications:
+  flowdock:
+    secure: VxM2wEGKNn53R28HSUM1ZTc39XUTOfe203kNf9C8Upv+B0ValbeYOTPeqelgK6+qMwDIlSZu6on0zHINVhzHsQDH+3EY6micZP8OCAgHFGGPe0/GPujZA+lY1by3OBlUVg7GJgGBu0qAg62UNFZwbDWMTb7EPMCnN4KCcLn2hkc=
