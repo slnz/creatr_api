@@ -1,0 +1,53 @@
+h1. Creatr API
+
+"!https://travis-ci.org/slnz/creatr_api.svg!":https://travis-ci.org/slnz/creatr_api "!https://codeclimate.com/github/slnz/creatr_api.png!":https://codeclimate.com/github/slnz/creatr_api !https://gemnasium.com/slnz/creatr_api.svg(Dependency Status)!:https://gemnasium.com/slnz/creatr_api
+
+This is the API for Creatr.
+
+h2. Creatr
+
+"Creatr" is a project of the University Christian Group "Student Life":https://www.studentlife.org.nz/ that allows a movement of people whether a church, youth group or mission organization to organize & monitor digital outreaches so they can focus on connecting with people.
+
+Don't hesitate to "contact us":https://www.studentlife.org.nz/contact-us/ if you any questions or comments.
+
+h2.  How does Creatr work?
+
+# An individual creates a movement that represents a real world group.
+# He/She generates his/her campaigns, inputting questions etc.
+# He/She invites others to participate in that campaign.
+# He/She follows up the participants using a CRM
+
+"http://api.creatr.io/":http://api.creatr.io/
+
+h2. Setting Up Creatr API
+
+h3. Setup configuration files
+
+Make any necessary edits to these if the defaults don't work for you.
+
+Database
+bc. cp config/database.example.yml config/database.yml
+
+Environment Variables
+bc. cp .env.example .env
+
+h3. Run basic setup tasks
+
+bc.. rake db:create:all
+rake db:migrate
+rake db:populate
+bundle install
+
+h3. Start your local server
+
+bc. foreman start
+
+h3. Start your continuous testing environment
+
+bc. bundle exec guard
+
+Creatr API should now be running on your computer at the URL "http://localhost:5000":http://localhost:5000
+
+h3. Creatr API Documentation
+
+On your local server you can find the documentation hosted at the URL "http://localhost:5000/api/docs":http://localhost:5000/api/docs
