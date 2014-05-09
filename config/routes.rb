@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :user
+      get 'me', to: 'users#me', as: 'default'
     end
   end
 end
