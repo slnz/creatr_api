@@ -5,8 +5,8 @@ rvm:
 env:
   global:
   - AMAZON_S3_BUCKET=slnz_bundle_cache
-  - AMAZON_ACCESS_KEY_ID=AKIAJQKGKDVVEYOJWQEQ
-  - secure: FbC37s42jwrbTA8buE5NyydyhUHPjpWlhdlFSN76GfCcuwAS+Ic2/U4dZ3dpQCPon7v1Xq1PsJKbjGeDcb9xxMyGfYx3xvzFT5VXdZ++cM0STiI/BcFtONziLekmbdrobg4OEKfDIppIbktZvCF9mtcP4Klyv7/TNVZjSPwWNl0=
+  - AMAZON_ACCESS_KEY_ID=AKIAJ7634GY5G6ZLG2ZA
+  - secure: "m4HxMsqP5Re8NskI+rnotYaWFuEsTx+g5bDAoSZiRaRFQiPfWxNepdo/aR5It+h57aytcpnwSX8cpUxSEMqYycyJ9+AA3UUije04kWhf6DpcjNCi9LwIrqXnShIKIJwqeTHIXIv0vZFaXUMpX0PUHCEvebQACRcLrN/ij6+3M7g="
 install:
 - script/cached-bundle install --deployment --without development
 before_script:
@@ -18,7 +18,7 @@ script:
 addons:
   code_climate:
     repo_token:
-      secure: "ZA+bZaJ3U4vxBo7tr475Lt0fJoH045309H+TOKOToXYWC8xu1VRUWzrYsJKivpzKM4lCKu8X30fw/8f3AAocnV2ou5+3SHUZXTji2vcgIPAuYOm+xAHB2vfrJjYYibmpeCyi26EeSr5Ny5H2OUr6dTX8wkoMMmUyWaOY/lVWSwg="
+      secure: "K9bHHh7Ib/TSXVPRYuAdL8yukkfshSK12bDE0M9LGpfy337fSjyoLMmX7kJh7F3vZCXCDwu94z9K40uSMFlmRr7FYZlgt0N7vTb7Zt5AjtJXoZKyflX1Yr+vP2Poql4JAJRgl+FDkBz0RlEWPtZFhZWkYQSWy23CBWItzKbGLvs="
 notifications:
   flowdock:
     secure: VxM2wEGKNn53R28HSUM1ZTc39XUTOfe203kNf9C8Upv+B0ValbeYOTPeqelgK6+qMwDIlSZu6on0zHINVhzHsQDH+3EY6micZP8OCAgHFGGPe0/GPujZA+lY1by3OBlUVg7GJgGBu0qAg62UNFZwbDWMTb7EPMCnN4KCcLn2hkc=
