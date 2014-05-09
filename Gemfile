@@ -18,6 +18,9 @@ gem 'cancancan', '~> 1.7'
 gem 'airbrake'
 gem 'analytics-ruby', '~>1.0'
 
+# Docs
+gem 'swagger-docs'
+
 group :development, :production do
   gem 'puma'
 end
