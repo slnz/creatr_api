@@ -1,0 +1,31 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.1.0
+env:
+  global:
+  - AMAZON_S3_BUCKET=slnz_bundle_cache
+  - AMAZON_ACCESS_KEY_ID=AKIAJQKGKDVVEYOJWQEQ
+  - secure: FbC37s42jwrbTA8buE5NyydyhUHPjpWlhdlFSN76GfCcuwAS+Ic2/U4dZ3dpQCPon7v1Xq1PsJKbjGeDcb9xxMyGfYx3xvzFT5VXdZ++cM0STiI/BcFtONziLekmbdrobg4OEKfDIppIbktZvCF9mtcP4Klyv7/TNVZjSPwWNl0=
+install:
+- script/cached-bundle install --deployment --without development
+before_script:
+- psql -c 'create database creatr_api_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+- bundle exec rake db:migrate RAILS_ENV=test
+script:
+- RAILS_ENV=test bundle exec rake
+addons:
+  code_climate:
+    repo_token:
+      secure: "ZA+bZaJ3U4vxBo7tr475Lt0fJoH045309H+TOKOToXYWC8xu1VRUWzrYsJKivpzKM4lCKu8X30fw/8f3AAocnV2ou5+3SHUZXTji2vcgIPAuYOm+xAHB2vfrJjYYibmpeCyi26EeSr5Ny5H2OUr6dTX8wkoMMmUyWaOY/lVWSwg="
+notifications:
+  flowdock:
+    secure: VxM2wEGKNn53R28HSUM1ZTc39XUTOfe203kNf9C8Upv+B0ValbeYOTPeqelgK6+qMwDIlSZu6on0zHINVhzHsQDH+3EY6micZP8OCAgHFGGPe0/GPujZA+lY1by3OBlUVg7GJgGBu0qAg62UNFZwbDWMTb7EPMCnN4KCcLn2hkc=
+deploy:
+  provider: heroku
+  api_key:
+    secure: qYpTvnEaacSYXMTmP7UvjnbUe369Z9C5GlB7aqmFwXHpeeR06447t5o1VtBDxKMlu9eu9e2FFL6UrCXkcGXLwx94O3/F/oC2wwLqyxmo6buNtgkp/2zPGceS5hX/dmWMKl0yXwT74hwUpzXKO143R4IVPmak+W9JeJ+nUDDDJ+Q=
+  app:
+    api: creatr-api-staging
+    api-production: creatr-api
