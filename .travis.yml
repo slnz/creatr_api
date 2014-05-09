@@ -27,5 +27,11 @@ deploy:
   api_key:
     secure: qYpTvnEaacSYXMTmP7UvjnbUe369Z9C5GlB7aqmFwXHpeeR06447t5o1VtBDxKMlu9eu9e2FFL6UrCXkcGXLwx94O3/F/oC2wwLqyxmo6buNtgkp/2zPGceS5hX/dmWMKl0yXwT74hwUpzXKO143R4IVPmak+W9JeJ+nUDDDJ+Q=
   app:
-    api: creatr-api-staging
-    api-production: creatr-api
+    master: creatr-api-staging
+    production: creatr-api
+  run:
+    - "rake db:migrate"
+    - restart
+    - "rake cleanup"
+  on:
+    repo: slnz/creatr_api
