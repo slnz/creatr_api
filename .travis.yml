@@ -35,4 +35,4 @@ addons:
       secure: "K9bHHh7Ib/TSXVPRYuAdL8yukkfshSK12bDE0M9LGpfy337fSjyoLMmX7kJh7F3vZCXCDwu94z9K40uSMFlmRr7FYZlgt0N7vTb7Zt5AjtJXoZKyflX1Yr+vP2Poql4JAJRgl+FDkBz0RlEWPtZFhZWkYQSWy23CBWItzKbGLvs="
 notifications:
   flowdock:
-    secure: "nbDuPUdw1vFraeU2A99CbKSTVgr9duLh6WwfGORpIg5jPKUMOIwk5hgf7dUcyhH132mdNg+h/xSu3q/7xlm1Q6aPTOMWmhhdt6fljqo/T19tY5yXW4zDx8+oOil9S7LSlGk/HpE04bB9rqyLqFQzMppj1v/jyqjdKPMMf8ZNh0E="
+    secure: "lsDfkAmk/uiKddbwobNcZGCgGk57lQFbRKMZw3PsmyC5JwhYly5paA34N259zRCTjUsJQHAURWt6N9bW7OPpd0b8c0J0s3+6+RRF+nkaDKrMue3+XSvo4lB/Ru1MWgrG0i7PLEii8H5KHL5gBVdfn8H30CgeukmNEBzQiqa9HX0="
